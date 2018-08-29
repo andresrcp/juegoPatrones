@@ -11,7 +11,7 @@ public class Enanos extends PersonajeAbstracto {
 			setEscudo("130");
 			setAtaque("140");
                         setVelocidad("460");
-                        setClase("Healer");
+                        setClase("Enanos");
 		}
 		
 		if(ref==2){
@@ -20,7 +20,7 @@ public class Enanos extends PersonajeAbstracto {
 			setEscudo("140");
 			setAtaque("150");
                         setVelocidad("410");
-			 setClase("Healer");
+			 setClase("Enanos");
 			
 		}
 		if(ref==3){
@@ -29,7 +29,7 @@ public class Enanos extends PersonajeAbstracto {
 			setEscudo("135");
 			setAtaque("155");
                         setVelocidad("420");
-                        setClase("Healer");
+                        setClase("Enanos");
 			
 		}
 		if(ref==4){
@@ -38,7 +38,7 @@ public class Enanos extends PersonajeAbstracto {
 			setEscudo("145");
 			setAtaque("145");
                         setVelocidad("425");
-                        setClase("Healer");
+                        setClase("Enanos");
 		}
                 
                 if(ref==5){
@@ -47,7 +47,7 @@ public class Enanos extends PersonajeAbstracto {
 			setEscudo("145");
 			setAtaque("145");
                         setVelocidad("425");
-                        setClase("Healer");
+                        setClase("Enanos");
 		}
 	
 		

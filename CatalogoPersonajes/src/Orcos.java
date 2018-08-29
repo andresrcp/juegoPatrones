@@ -9,7 +9,7 @@ public class Orcos extends PersonajeAbstracto {
 			setEscudo("100");
 			setAtaque("230");
                         setVelocidad("440");
-                        setClase("Distancia");
+                        setClase("Orcos");
 		}
 		
 		if(ref==2){
@@ -18,7 +18,7 @@ public class Orcos extends PersonajeAbstracto {
 			setEscudo("85");
 			setAtaque("220");
                         setVelocidad("430");
-                        setClase("Distancia");
+                        setClase("Orcos");
 			
 			
 		}
@@ -28,7 +28,7 @@ public class Orcos extends PersonajeAbstracto {
 			setEscudo("80");
 			setAtaque("300");
                         setVelocidad("435");
-                        setClase("Distancia");
+                        setClase("Orcos");
 			
 		}
                 
@@ -38,7 +38,7 @@ public class Orcos extends PersonajeAbstracto {
 			setEscudo("80");
 			setAtaque("300");
                         setVelocidad("435");
-                        setClase("Distancia");
+                        setClase("Orcos");
 			
 		}
                 
@@ -48,7 +48,7 @@ public class Orcos extends PersonajeAbstracto {
 			setEscudo("80");
 			setAtaque("300");
                         setVelocidad("435");
-                        setClase("Distancia");
+                        setClase("Orcos");
 			
 		}
 				

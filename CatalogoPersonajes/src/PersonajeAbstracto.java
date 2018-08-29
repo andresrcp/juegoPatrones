@@ -1,4 +1,7 @@
 
+import java.awt.Image;
+
+
 public abstract class PersonajeAbstracto {
 	
 	String Especialidad;
@@ -7,6 +10,7 @@ public abstract class PersonajeAbstracto {
 	String Ataque;
         String Velocidad;
         String Clase;
+        
         
 	
 	abstract void setEspecialidad(String nuevaEspecialidad);

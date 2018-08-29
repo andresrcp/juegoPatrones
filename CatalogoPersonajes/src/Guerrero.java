@@ -1,8 +1,9 @@
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 public class Guerrero extends PersonajeAbstracto {
-	
-	
-	
+    
 	public Guerrero(int ref) {
 		super(ref);
 		
@@ -12,9 +13,7 @@ public class Guerrero extends PersonajeAbstracto {
 			setEscudo("180");
 			setAtaque("110");
                         setVelocidad("420");
-                        setClase("Guerrero");
-                        
-                        
+                        setClase("Humanos"); 
 		}
 		
 		if(ref==2){
@@ -23,8 +22,7 @@ public class Guerrero extends PersonajeAbstracto {
 			setEscudo("150");
 			setAtaque("180");
                         setVelocidad("430");
-			setClase("Guerrero");
-			
+			setClase("Humanos");
 		}
 		if(ref==3){
 			setEspecialidad("Templario");
@@ -32,7 +30,7 @@ public class Guerrero extends PersonajeAbstracto {
 			setEscudo("240");
 			setAtaque("85");
                         setVelocidad("400");
-			setClase("Guerrero");
+			setClase("Humanos");
 		}
 		if(ref==4){
 			setEspecialidad("Mago");
@@ -40,7 +38,7 @@ public class Guerrero extends PersonajeAbstracto {
 			setEscudo("150");
 			setAtaque("200");
                         setVelocidad("410");
-			setClase("Guerrero");
+			setClase("Humanos");
 		}
 		if(ref==5){
 			setEspecialidad("Arquero");
@@ -48,48 +46,40 @@ public class Guerrero extends PersonajeAbstracto {
 			setEscudo("100");
 			setAtaque("230");
                         setVelocidad("450");
-			setClase("Guerrero");
+			setClase("Humanos");
 		}
 		
 		
 	}
 
-	
-
 	@Override
 	void setEspecialidad(String nuevaEspecialidad) {
-		Especialidad=nuevaEspecialidad;
-		
+		Especialidad=nuevaEspecialidad;	
 	}
 
 	@Override
 	void setVida(String nuevaVida) {
-		Vida=nuevaVida;
-		
+		Vida=nuevaVida;	
 	}
 
 	@Override
 	void setEscudo(String nuevoEscudo) {
-		Escudo=nuevoEscudo;
-		
+		Escudo=nuevoEscudo;	
 	}
 
 	@Override
 	void setAtaque(String nuevoAtaque) {
-		Ataque=nuevoAtaque;
-		
+		Ataque=nuevoAtaque;	
 	}
 	
         @Override
 	void setVelocidad(String nuevoVelocidad) {
-		Velocidad=nuevoVelocidad;
-		
+		Velocidad=nuevoVelocidad;	
 	}
 	
         @Override
 	void setClase(String nuevaClase) {
-		Clase=nuevaClase;
-		
+		Clase=nuevaClase;	
 	}
 
 }
