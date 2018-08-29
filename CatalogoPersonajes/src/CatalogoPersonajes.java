@@ -14,15 +14,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import sun.font.TrueTypeFont;
 
 
 
 
 public class CatalogoPersonajes extends JFrame { 
-        private JPanel contentPane;
+        private JPanel contentPane;   
 	FabricaAbstractaPersonaje fabricador;
-		
-	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,7 +37,9 @@ public class CatalogoPersonajes extends JFrame {
 
 	
 	public CatalogoPersonajes() {
-                   
+                
+                this.setResizable(false);
+            
 		setBounds(100, 100, 670, 492);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -47,11 +48,11 @@ public class CatalogoPersonajes extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		JLabel lblSeleccioneUnaClase = new JLabel("SELECCIONA UNA CLASE");
                 lblSeleccioneUnaClase.setForeground(java.awt.Color.white);
-		lblSeleccioneUnaClase.setFont(new Font("ARIAL", Font.PLAIN, 30));
-		lblSeleccioneUnaClase.setBounds(150, 350, 370, 86);
+		lblSeleccioneUnaClase.setFont(new Font("Castellar", Font.BOLD, 25));
+		lblSeleccioneUnaClase.setBounds(20, 380, 370, 86);
 		contentPane.add(lblSeleccioneUnaClase);             
-    
-		JButton guerbtn = new JButton("Humanos");
+
+		JButton guerbtn = new JButton("Humanos"); 
 		guerbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				fabricador=new FabricaConcretaGuerreros();
@@ -59,7 +60,7 @@ public class CatalogoPersonajes extends JFrame {
 				frame.setVisible(true);      
                         }
 		});
-		guerbtn.setBounds(50, 100, 100, 30);
+		guerbtn.setBounds(50, 50, 100, 30);
 		contentPane.add(guerbtn);
                 
                 
@@ -73,7 +74,7 @@ public class CatalogoPersonajes extends JFrame {
                                 
 			}
 		});
-		btnOp.setBounds(50, 200, 100, 30);
+		btnOp.setBounds(300, 50, 100, 30);
 		contentPane.add(btnOp);
 		
 		JButton btnOp_1 = new JButton("Enanos");
@@ -85,12 +86,31 @@ public class CatalogoPersonajes extends JFrame {
                                 
 			}
 		});
-		btnOp_1.setBounds(50, 300, 100, 30);
+		btnOp_1.setBounds(500, 50, 100, 30);
 		contentPane.add(btnOp_1);
                 
+                JLabel human = new JLabel("");
+		human.setIcon(new ImageIcon(CatalogoPersonajes.class.getResource("/resources/1humano.png")));
+		human.setBounds(30,103, 370, 350);
+                contentPane.add(human); 
+                
+                JLabel orc = new JLabel("");
+		orc.setIcon(new ImageIcon(CatalogoPersonajes.class.getResource("/resources/orcos.png")));
+		orc.setBounds(270,70, 370, 350);
+                contentPane.add(orc); 
+                
+                JLabel ena = new JLabel("");
+		ena.setIcon(new ImageIcon(CatalogoPersonajes.class.getResource("/resources/enano2.png")));
+		ena.setBounds(500,227, 370, 200);
+                contentPane.add(ena); 
+                
                 JLabel fondo = new JLabel("");
-		fondo.setIcon(new ImageIcon(CatalogoPersonajes.class.getResource("/resources/fondo.jpg")));
+		fondo.setIcon(new ImageIcon(CatalogoPersonajes.class.getResource("/resources/fondo2.png")));
 		fondo.setBounds(0, 0, 670, 492);
-		contentPane.add(fondo);   
+                contentPane.add(fondo); 
+                
+               
+              
+		
     }    
 }
