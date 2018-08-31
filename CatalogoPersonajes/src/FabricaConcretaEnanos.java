@@ -1,4 +1,6 @@
 
+
+
 public class FabricaConcretaEnanos extends FabricaAbstractaPersonaje {
 
     @Override

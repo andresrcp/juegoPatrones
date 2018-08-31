@@ -1,4 +1,6 @@
 
+
+
 public class FabricaConcretaOrcos extends FabricaAbstractaPersonaje {
 
 	@Override

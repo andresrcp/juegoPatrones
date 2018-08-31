@@ -1,9 +1,9 @@
 
 
+
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.PageAttributes;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -52,13 +52,15 @@ public class CatalogoPersonajes extends JFrame {
 		lblSeleccioneUnaClase.setBounds(20, 380, 370, 86);
 		contentPane.add(lblSeleccioneUnaClase);             
 
-		JButton guerbtn = new JButton("Humanos"); 
+		JButton guerbtn = new JButton("Humanos");
 		guerbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				fabricador=new FabricaConcretaGuerreros();
 				tipo frame = new tipo("Guerrero", "Caballero" , "Templario", "Mago", "Arquero", fabricador );
-				frame.setVisible(true);      
+                                frame.setVisible(true);
+                                
                         }
+                        
 		});
 		guerbtn.setBounds(50, 50, 100, 30);
 		contentPane.add(guerbtn);
@@ -81,7 +83,7 @@ public class CatalogoPersonajes extends JFrame {
 		btnOp_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				fabricador=new FabricaConcretaEnanos();
-				tipo frame = new tipo("Sacerdote", "Paladin" , "Ballestero", "Elementalista","Alquimista", fabricador );
+				tipo frame = new tipo("Sacerdote", "Paladin" , "Ballestero", "Elemental","Luchador", fabricador );
 				frame.setVisible(true);
                                 
 			}

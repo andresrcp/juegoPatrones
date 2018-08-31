@@ -1,4 +1,6 @@
 
+
+
 public class FabricaConcretaGuerreros extends FabricaAbstractaPersonaje {
 
 
