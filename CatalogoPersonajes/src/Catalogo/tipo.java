@@ -2,30 +2,32 @@ package Catalogo;
 
 
 
+import dibuja.Botones;
 import dibuja.fondo;
 import dibuja.imagenes;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 public class tipo extends JFrame {
 
 	public tipo(String m1, String m2, String m3, String m4, String m5, FabricaAbstractaPersonaje fab) {
                 
-		
                 CatalogoPersonajes frame = new CatalogoPersonajes();      	
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ImageIcon icon = new ImageIcon(frame.getClass().getResource("/resources/fondo2.png"));
-                fondo panel= new fondo(icon.getImage());
+                fondo panel1= new fondo(icon.getImage());
                 
                 JLabel lblSeleccioneTipo = new JLabel("SELECCIONA UN TIPO");
                 lblSeleccioneTipo.setForeground(java.awt.Color.white);
@@ -46,12 +48,15 @@ public class tipo extends JFrame {
                 
                 ImageIcon icon6 = new ImageIcon(frame.getClass().getResource("/resources/orcarch.png"));
                 imagenes img5= new imagenes(icon6.getImage());
-                
+
                 JButton op1 = new JButton("");
+                op1.setForeground(java.awt.Color.white);  
+                op1.setContentAreaFilled(false);
 		op1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-                                if(fab.getPersonaje(1).Clase.equals("Humanos")) {
+			public void actionPerformed(ActionEvent e) {    
+                            if(fab.getPersonaje(1).Clase.equals("Humanos")) {
                                 Vista frame = new Vista(fab.getPersonaje(1), new ImageIcon(tipo.class.getResource("/resources/1humano.png")));
+                                op1.setRolloverIcon(new ImageIcon(frame.getClass().getResource("/resources/botones/btnguerr.png")));
                                 frame.setVisible(true);                   
                                 }
 				
@@ -72,6 +77,8 @@ public class tipo extends JFrame {
 		op1.setBounds(600, 100, 100, 30);
 		
 		JButton op2 = new JButton("");
+                op2.setForeground(java.awt.Color.white);  
+                op2.setContentAreaFilled(false);
 		op2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(fab.getPersonaje(1).Clase.equals("Humanos")) {
@@ -92,6 +99,8 @@ public class tipo extends JFrame {
 		op2.setBounds(600, 150, 100, 30);
 		
 		JButton op3 = new JButton("");
+                op3.setForeground(java.awt.Color.white);  
+                op3.setContentAreaFilled(false);
 		op3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(fab.getPersonaje(1).Clase.equals("Humanos")) {
@@ -112,6 +121,8 @@ public class tipo extends JFrame {
 		op3.setBounds(600, 200, 100, 30);
 		
 		JButton op4 = new JButton("");
+                op4.setForeground(java.awt.Color.white);  
+                op4.setContentAreaFilled(false);
 		op4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(fab.getPersonaje(1).Clase.equals("Humanos")) {
@@ -135,6 +146,8 @@ public class tipo extends JFrame {
 		op4.setBounds(600, 250, 100, 30);
 		
 		JButton op5 = new JButton("");
+                op5.setForeground(java.awt.Color.white);  
+                op5.setContentAreaFilled(false);
 		op5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(fab.getPersonaje(1).Clase.equals("Humanos")) {
@@ -152,7 +165,6 @@ public class tipo extends JFrame {
 					}
 			}
 		});
-		
 		op5.setBounds(600, 300, 100, 30);
 		
 		op1.setText(m1);
@@ -167,20 +179,20 @@ public class tipo extends JFrame {
                 img4.setLocation(500, 300);
                 img5.setLocation(400, 165);
                 
-                panel.add(img);
-                panel.add(img2);
-                panel.add(img3);
-                panel.add(img4);
-                panel.add(img5);
-                panel.add(op1);
-                panel.add(op2);
-                panel.add(op3);
-                panel.add(op4);
-                panel.add(op5);
-                panel.add(lblSeleccioneTipo);
-                frame.getContentPane().add(panel);
+                panel1.add(img);
+                panel1.add(img2);
+                panel1.add(img3);
+                panel1.add(img4);
+                panel1.add(img5);
+                panel1.add(op1);
+                panel1.add(op2);
+                panel1.add(op3);
+                panel1.add(op4);
+                panel1.add(op5);
+                panel1.add(lblSeleccioneTipo);
+                frame.getContentPane().add(panel1);
                 frame.pack();
 		frame.setVisible(true); 
-                
+       
 	}
 }

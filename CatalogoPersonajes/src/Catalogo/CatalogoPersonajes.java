@@ -46,9 +46,12 @@ public class CatalogoPersonajes extends JFrame {
                                         ImageIcon icon4 = new ImageIcon(frame.getClass().getResource("/resources/enano2.png"));
                                         imagenes enano= new imagenes(icon4.getImage());
                                         
+                                       
+                                        
                                         JLabel lblSeleccioneUnaClase = new JLabel("SELECCIONA UNA CLASE");
                                         lblSeleccioneUnaClase.setForeground(java.awt.Color.white);
                                         lblSeleccioneUnaClase.setFont(new Font("Castellar", Font.BOLD,25));
+                                        lblSeleccioneUnaClase.setFont(new Font("Castellar", Font.ITALIC,25));
                                         lblSeleccioneUnaClase.setBounds(200, 420, 370, 86);                                        
                                         
                                         final Botones boton=new Botones(new ImageIcon(frame.getClass().getResource("/resources/botones/btn.png"))); 
@@ -58,8 +61,7 @@ public class CatalogoPersonajes extends JFrame {
                                         FabricaAbstractaPersonaje fabricador;
                                         fabricador=new FabricaConcretaGuerreros();
                                         tipo frame = new tipo("Guerrero", "Caballero" , "Templario", "Mago", "Arquero", fabricador );
-                                        
-                                        frame.setVisible(true);
+                                        frame.setVisible(false);
                                         }
                                         });
                                           
@@ -70,7 +72,7 @@ public class CatalogoPersonajes extends JFrame {
                                         FabricaAbstractaPersonaje fabricador;
                                         fabricador=new FabricaConcretaOrcos();
                                         tipo frame = new tipo("Barbaro", "Cazador" , "Asesino" , "Brujo", "Chaman", fabricador );
-                                        frame.setVisible(true);
+                                        frame.setVisible(false);
                                         }
                                         });
                                         
@@ -81,7 +83,7 @@ public class CatalogoPersonajes extends JFrame {
                                         FabricaAbstractaPersonaje fabricador;
                                         fabricador=new FabricaConcretaEnanos();  
                                         tipo frame = new tipo("Sacerdote", "Paladin" , "Ballestero", "Elemental","Luchador", fabricador );
-                                        frame.setVisible(true);  
+                                        frame.setVisible(false);  
                                         }
                                         });
                                         
@@ -91,6 +93,7 @@ public class CatalogoPersonajes extends JFrame {
                                         boton.setLocation(100, 50);
                                         boton2.setLocation(350,50);
                                         boton3.setLocation(600,50);
+                                        
                                         panel.add(human);
                                         panel.add(orco);
                                         panel.add(enano);
@@ -109,8 +112,7 @@ public class CatalogoPersonajes extends JFrame {
 		});
                 
 	}
-
-                                      
+                            
 	public CatalogoPersonajes () {
                 this.setResizable(false);
 		setBounds(300, 100,0,0);

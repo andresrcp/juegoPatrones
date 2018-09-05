@@ -23,5 +23,6 @@ public class fondo extends JPanel {
     @Override
     protected void paintComponent (Graphics g){
         g.drawImage(img, 0, 0, null);
+        setOpaque(false);
     }
 }
